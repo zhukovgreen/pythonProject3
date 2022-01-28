@@ -1,0 +1,8 @@
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: AK1DS
+      POSTGRES_USER: a_zhukov
+    ports:
+      - 5432:5432
