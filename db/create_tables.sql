@@ -38,7 +38,7 @@ create table if not exists change_history
 );
 
 -- extension needed for encrypting the user password
-CREATE EXTENSION pgcrypto;
+create EXTENSION pgcrypto;
 
 -- adding users
 insert into userdata(email, username, password)

@@ -17,7 +17,7 @@ from userdata
          join change_history on settings.id = change_history.settings
 where userdata.username = 'georgy'
   and change_history.created_at >=
-      timestamp '2022-01-27 21:59:33.372258 +00:00'
+      '2022-01-27 21:59:33.372258 +00:00'::timestamptz
 order by userdata.username,
          change_history.created_at desc;
 
