@@ -81,3 +81,19 @@ where userdata.email = 'my_kid_varvara@utb.cz'
 delete
 from userdata
 where username = 'georgy'
+
+-- some fictional additional queries to fulfill the needs of the acceptance criteria
+
+-- [4] query 13 (with join 3)
+-- get users with activated debug mode in settings
+select userdata.username, settings.debug
+from userdata
+    inner join settings on settings.user_id = userdata.id
+where settings.debug is true
+
+-- [4] query 14 (with join 4)
+-- Get settings ids where private key id ends with number
+
+
+-- [4] query 15 (with join 5)
+-- Update passwords for users which are studying in utb (has email endsing with @utb.cz)
