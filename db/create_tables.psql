@@ -1,3 +1,5 @@
+-- [1] Minimum 4 tables with normalized structure
+-- [2] All 4 tables are referenced
 drop schema public cascade;
 create schema public;
 
@@ -40,6 +42,8 @@ create table if not exists change_history
 -- extension needed for encrypting the user password
 create EXTENSION pgcrypto;
 
+-- [3] Filling tables with enough data to check the essential functionality
+-- [4.5] Inserts
 -- adding users
 insert into userdata(email, username, password)
 values ('a_zhukov@utb.cz', 'a_zhukov',
